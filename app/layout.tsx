@@ -19,9 +19,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
 export const metadata: Metadata = {
   title: "Aaryan Kapoor",
   description: "Design Engineer",
-  icons: {
-    icon: "/icon.ico",
-  },
+  icons: "/icon.ico",
 };
 
 export const viewport: Viewport = {

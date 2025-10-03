@@ -240,7 +240,7 @@ export default function Page() {
                 </DrawerHeader>
               </div>
               <ScrollArea
-                className="h-[520px] w-full md:h-[780px]"
+                className="w-full [&>[data-radix-scroll-area-viewport]]:max-h-[calc(100vh-200px)]"
                 type="hover"
               >
                 <div className="mx-auto mb-16 flex max-w-[85%] flex-col">
