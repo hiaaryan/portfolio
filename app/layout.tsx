@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Nunito, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
-import { Cursor } from "motion-plus/react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -42,18 +41,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Cursor
-            style={{
-              backgroundColor: "var(--color-foreground)",
-            }}
-            spring={{ stiffness: 1500, damping: 150 }}
-            variants={{
-              pointer: { scale: 0.55 },
-              default: { scale: 0.75 },
-              text: { scale: 1, backgroundColor: "var(--color-foreground)" },
-              pressed: { scale: 0.6 },
-            }}
-          />
           <TooltipProvider delayDuration={0}>{children}</TooltipProvider>
         </ThemeProvider>
       </body>

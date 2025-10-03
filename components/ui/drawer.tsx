@@ -16,7 +16,7 @@ function DrawerTrigger({
 }: React.ComponentProps<typeof DrawerPrimitive.Trigger>) {
   return (
     <DrawerPrimitive.Trigger
-      className="focus:outline-none"
+      className="cursor-pointer focus:outline-none"
       data-slot="drawer-trigger"
       {...props}
     />
