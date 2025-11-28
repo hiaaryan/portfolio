@@ -16,7 +16,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
 });
 
 export const metadata: Metadata = {
-  title: "Aaryan Kapoor",
+  title: "Aaryan — Design Engineer",
   description: "Design Engineer",
   icons: {
     apple: "/favicon.png",

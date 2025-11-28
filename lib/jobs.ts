@@ -8,16 +8,16 @@ export const jobs = [
     positions: [
       {
         id: 1,
-        date: "Jul, 2025 - Present",
-        title: "Design Engineer",
+        date: "Nov, 2025 - Present",
+        title: "Design Lead",
         level: "Core",
         remote: true,
       },
       {
         id: 2,
-        date: "Jul, 2024 - Jun, 2025",
+        date: "Jul, 2024 - Nov, 2025",
         title: "Design Engineer",
-        level: "Junior",
+        level: "Core",
         remote: true,
       },
     ],

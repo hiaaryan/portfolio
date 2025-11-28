@@ -56,26 +56,13 @@ export default function Page() {
           height={64}
         />
         <div className="flex flex-col">
-          <h1 className="w-fit leading-tight font-semibold">Aaryan</h1>
+          <h1 className="w-fit text-base leading-tight font-semibold">
+            Aaryan
+          </h1>
           <p className="w-fit text-sm opacity-50">Design Engineer</p>
         </div>
       </div>
-      <div className="flex items-center gap-4">
-        <Link
-          href="https://x.com/hiaaryan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <HugeiconsIcon icon={NewTwitterIcon} size={15} strokeWidth={2.25} />
-        </Link>
-        <Link
-          href="https://github.com/hiaaryan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <HugeiconsIcon icon={GithubIcon} size={15} strokeWidth={2.25} />
-        </Link>
-      </div>
+
       <p className="text-foreground/50 w-full text-sm text-pretty lg:text-base">
         I currently work at
         <Tooltip>
@@ -149,6 +136,22 @@ export default function Page() {
         Good design over functionality is my rule of thumb and it helps me craft
         simple, feel good experiences.
       </p>
+      <div className="flex items-center gap-4">
+        <Link
+          href="https://x.com/hiaaryan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <HugeiconsIcon icon={NewTwitterIcon} size={15} strokeWidth={2.25} />
+        </Link>
+        <Link
+          href="https://github.com/hiaaryan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <HugeiconsIcon icon={GithubIcon} size={15} strokeWidth={2.25} />
+        </Link>
+      </div>
       <div className="flex flex-col gap-8">
         <h1 className="w-fit leading-tight font-semibold">Work</h1>
         {jobs.map((job) => {
@@ -179,7 +182,7 @@ export default function Page() {
                   <TimelineItem key={item.id} step={item.id}>
                     <TimelineHeader>
                       <TimelineSeparator />
-                      <TimelineTitle className="w-fit">
+                      <TimelineTitle className="w-fit gap-1">
                         {item.title}
                         <Badge className="scale-90">{item.level}</Badge>
                       </TimelineTitle>
@@ -195,28 +198,30 @@ export default function Page() {
           );
         })}
       </div>
-      <div className="flex flex-col gap-3.5">
+      <div className="flex flex-col gap-5.5">
         <h1 className="w-fit leading-tight font-semibold">Projects</h1>
         <Drawer open={open} onOpenChange={setOpen}>
-          {projects.map((project) => {
-            return project.showcase ? (
-              <DrawerTrigger
-                key={project.id}
-                onClick={() => setSelectedProject(project)}
-              >
-                <Project project={project} />
-              </DrawerTrigger>
-            ) : (
-              <Link
-                href={project.website}
-                key={project.id}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Project project={project} />
-              </Link>
-            );
-          })}
+          <div className="flex flex-col gap-3">
+            {projects.map((project) => {
+              return project.showcase ? (
+                <DrawerTrigger
+                  key={project.id}
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <Project project={project} />
+                </DrawerTrigger>
+              ) : (
+                <Link
+                  href={project.website}
+                  key={project.id}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Project project={project} />
+                </Link>
+              );
+            })}
+          </div>
           {selectedProject && (
             <DrawerContent className="min-h-[95%] justify-between gap-4 font-sans lg:max-w-[75%]">
               <div className="mx-auto flex w-[85%] items-center text-sm">
@@ -224,15 +229,15 @@ export default function Page() {
                   src={selectedProject.logo}
                   alt={selectedProject.name}
                   className="mb-0.5 inline-flex rounded-xl shadow-lg shadow-black/10"
-                  width={40}
-                  height={40}
+                  width={36}
+                  height={36}
                 />
                 <DrawerHeader className="gap-0 text-left">
                   <DrawerTitle className="w-fit text-sm leading-tight font-semibold">
                     {selectedProject.name}
                   </DrawerTitle>
                   <DrawerDescription className="flex w-fit items-center text-xs">
-                    <span className="w-fit text-sm opacity-50">
+                    <span className="w-fit text-xs opacity-50">
                       {selectedProject.description}
                     </span>
                     <Badge className="scale-90">{selectedProject.type}</Badge>
@@ -249,14 +254,12 @@ export default function Page() {
                   </div>
                 </div>
               </ScrollArea>
-              {/*<DrawerFooter className="pt-2">
-                <DrawerClose asChild>
-                  <Button variant="outline">Cancel</Button>
-                </DrawerClose>
-              </DrawerFooter>*/}
             </DrawerContent>
           )}
         </Drawer>
+      </div>
+      <div className="flex flex-col gap-5.5">
+        <h1 className="w-fit leading-tight font-semibold">Craft</h1>
       </div>
       <div className="flex flex-col text-sm opacity-50">
         P.S. I don&apos;t write blogs.{" "}

@@ -32,7 +32,7 @@ export function Flotek() {
         exit={{ opacity: 0, y: -10, filter: "blur(8px)" }}
         initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.25 }}
-        className="relative w-full overflow-hidden rounded-2xl"
+        className="relative w-full overflow-hidden rounded-3xl"
       >
         <video className="w-full" autoPlay playsInline muted loop>
           <source src={content.cover} type="video/webm" />
@@ -50,7 +50,7 @@ export function Flotek() {
           exit={{ opacity: 0, y: -10, filter: "blur(8px)" }}
           initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.25 }}
-          className="relative w-full overflow-hidden rounded-2xl"
+          className="relative w-full overflow-hidden rounded-3xl"
         >
           <Image
             src={image}
