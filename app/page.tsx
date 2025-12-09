@@ -258,9 +258,6 @@ export default function Page() {
           )}
         </Drawer>
       </div>
-      <div className="flex flex-col gap-5.5">
-        <h1 className="w-fit leading-tight font-semibold">Craft</h1>
-      </div>
       <div className="flex flex-col text-sm opacity-50">
         P.S. I don&apos;t write blogs.{" "}
         <p className="flex items-center gap-2">
