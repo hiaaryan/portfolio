@@ -21,6 +21,7 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { haptic } from "@/lib/haptic";
 import { brands, oss, Project } from "@/lib/projects";
 
 export default function Page() {
@@ -141,7 +142,10 @@ export default function Page() {
 						{brands.map((brand) => (
 							<DrawerTrigger
 								key={brand.id}
-								onClick={() => setSelectedBrand(brand)}
+								onClick={() => {
+									setSelectedBrand(brand);
+									haptic();
+								}}
 							>
 								<Project project={brand} />
 							</DrawerTrigger>
