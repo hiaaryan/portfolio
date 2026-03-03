@@ -44,14 +44,14 @@ export default function Page() {
 							src="/sellhub.png"
 							alt="sellhub"
 							className="mx-2 mb-0.5 inline-flex rounded-lg"
-							width={20}
-							height={20}
+							width={22}
+							height={22}
 						/>
 					</TooltipTrigger>
 					<TooltipContent className="py-3 font-sans">
 						<div className="space-y-2">
 							<div className="space-y-1">
-								<div className="items-center text-sm font-medium">
+								<div className="items-center font-medium">
 									<Image
 										src="/sellhub.png"
 										alt="sellhub"
@@ -77,8 +77,8 @@ export default function Page() {
 							src="/sileo.png"
 							alt="sileo"
 							className="mx-2 mb-0.5 inline-flex rounded-lg"
-							width={20}
-							height={20}
+							width={22}
+							height={22}
 						/>
 					</TooltipTrigger>
 					<TooltipContent className="py-3 font-sans">

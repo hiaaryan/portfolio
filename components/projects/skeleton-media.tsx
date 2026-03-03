@@ -11,14 +11,14 @@ export function Skeleton(props: SkeletonProps) {
 	const [loaded, setLoaded] = useState(false);
 
 	return (
-		<div className="relative w-full">
+		<div className={`relative w-full${props.variant === "video" ? " aspect-video" : ""}`}>
 			<div
-				className="absolute inset-0 animate-pulse bg-white/5 transition-opacity duration-500"
+				className="absolute inset-0 animate-pulse bg-white/5 rounded-2xl lg:rounded-4xl transition-opacity duration-500"
 				style={{ opacity: loaded ? 0 : 1 }}
 			/>
 			{props.variant === "video" ? (
 				<video
-					className="w-full h-full object-cover rounded-2xl lg:rounded-4xl"
+					className="absolute inset-0 w-full h-full object-cover rounded-2xl lg:rounded-4xl"
 					style={{ opacity: loaded ? 1 : 0, transition: "opacity 0.5s ease" }}
 					autoPlay
 					playsInline
