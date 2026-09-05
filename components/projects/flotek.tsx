@@ -18,7 +18,6 @@ const content = {
 		"/brands/flotek/Frame 12.png",
 		"/brands/flotek/Frame 13.png",
 		"/brands/flotek/Frame 14.png",
-		"/brands/flotek/Frame 15.png",
 	],
 };
 

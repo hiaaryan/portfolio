@@ -18,7 +18,6 @@ const content = {
 		"/brands/athletico/Frame 8.png",
 		"/brands/athletico/Frame 7.png",
 		"/brands/athletico/Frame 10.png",
-		"/brands/athletico/Frame 15.png",
 	],
 };
 
