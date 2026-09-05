@@ -22,7 +22,6 @@ export const oss = [
 		sponsor: (
 			<Image
 				alt="Vercel OSS Program"
-				className="opacity-80 dark:invert"
 				src="/program-badge.svg"
 				width={180}
 				height={100}
