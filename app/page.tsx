@@ -35,7 +35,7 @@ export default function Page() {
 					<p className="w-fit opacity-50">Design Engineer</p>
 				</div>
 			</div>
-			<div className="flex items-center gap-4">
+			<div className="flex items-center scale-90 lg:scale-100 origin-left gap-4">
 				<Link
 					href="https://x.com/hiaaryan"
 					target="_blank"
