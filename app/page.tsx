@@ -1,8 +1,12 @@
 "use client";
 
 import { HugeiconsIcon } from "@hugeicons/react";
-import { GithubIcon, NewTwitterIcon } from "@hugeicons-pro/core-stroke-rounded";
-import { ArrowRightIcon } from "@phosphor-icons/react";
+import {
+	ArrowRight02Icon,
+	GithubIcon,
+	Mail01Icon,
+	NewTwitterIcon,
+} from "@hugeicons-pro/core-stroke-rounded";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,11 +20,7 @@ import {
 	DrawerTrigger,
 } from "@/components/ui/drawer";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { MorphPill } from "@/components/ui/morph-pill";
 import { haptic } from "@/lib/haptic";
 import { brands, oss, Project } from "@/lib/projects";
 
@@ -35,75 +35,6 @@ export default function Page() {
 					<p className="w-fit opacity-50">Design Engineer</p>
 				</div>
 			</div>
-
-			<p className="text-foreground/50 w-full text-base text-pretty lg:text-base">
-				I currently work at
-				<Tooltip>
-					<TooltipTrigger asChild>
-						<Image
-							src="/sellhub.png"
-							alt="sellhub"
-							className="mx-2 mb-0.5 inline-flex rounded-lg"
-							width={22}
-							height={22}
-						/>
-					</TooltipTrigger>
-					<TooltipContent className="py-3 font-sans">
-						<div className="space-y-2">
-							<div className="space-y-1">
-								<div className="items-center font-medium">
-									<Image
-										src="/sellhub.png"
-										alt="sellhub"
-										className="mr-2 mb-0.5 inline-flex rounded-lg"
-										width={22}
-										height={22}
-									/>
-									Emergente Labs
-								</div>
-								<p className="text-foreground/50 text-xs">
-									Emergente Labs is a commerce company that builds tools for
-									digital sellers.
-								</p>
-							</div>
-						</div>
-					</TooltipContent>
-				</Tooltip>
-				as a design engineer, building tools for digital sellers. I am also
-				working on my open source project
-				<Tooltip>
-					<TooltipTrigger asChild>
-						<Image
-							src="/sileo.png"
-							alt="sileo"
-							className="mx-2 mb-0.5 inline-flex rounded-lg"
-							width={22}
-							height={22}
-						/>
-					</TooltipTrigger>
-					<TooltipContent className="py-3 font-sans">
-						<div className="space-y-2">
-							<div className="space-y-1">
-								<div className="items-center text-sm font-medium">
-									<Image
-										src="/sileo.png"
-										alt="sileo"
-										className="mr-2 mb-0.5 inline-flex rounded-lg"
-										width={22}
-										height={22}
-									/>
-									Sileo
-								</div>
-								<p className="text-foreground/50 text-xs">
-									Sileo is an opinionated physics based toast library for React.
-									Beautiful by default.
-								</p>
-							</div>
-						</div>
-					</TooltipContent>
-				</Tooltip>
-				which is an opinionated physics based toast library.
-			</p>
 			<div className="flex items-center gap-4">
 				<Link
 					href="https://x.com/hiaaryan"
@@ -119,7 +50,43 @@ export default function Page() {
 				>
 					<HugeiconsIcon icon={GithubIcon} size={15} strokeWidth={2.25} />
 				</Link>
+				<span className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-3 py-0.5 text-xs leading-5 font-semibold text-background dark:bg-foreground">
+					<span className="relative flex size-1.5">
+						<span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500" />
+						<span className="relative inline-flex size-1.5 rounded-full bg-emerald-500" />
+					</span>
+					Accepting Remote Contracts
+				</span>
+				<Link aria-label="Email" href="mailto:hi.aaryankapoor@gmail.com">
+					<HugeiconsIcon icon={Mail01Icon} size={15} strokeWidth={2.25} />
+				</Link>
 			</div>
+			<p className="text-foreground/50 scale-90 lg:scale-100 origin-left w-full text-pretty">
+				I currently work at
+				<MorphPill
+					description="Emergente Labs is a commerce company that builds tools for digital sellers."
+					href="https://emergentelabs.com"
+					icon="/sellhub.png"
+					label="Emergente Labs"
+				/>
+				as a design engineer, building tools for digital sellers.<br/><br/> Outside of
+				that, I mostly work on shipping oss
+				<MorphPill
+					description="sileo is an opinionated physics based toast library for React. Beautiful by default."
+					href="https://github.com/hiaaryan/sileo"
+					icon="/sileo.png"
+					label="sileo"
+				/>
+				which is an opinionated physics based toast library for React that stays
+				beautiful by default, and
+				<MorphPill
+					className="mr-0"
+					description="wora is an open source lossless music player, backed by the Vercel OSS Program."
+					href="https://github.com/playwora/wora"
+					icon="/wora.png"
+					label="wora"
+				/> which is a lossless music player.
+			</p>
 			<div className="flex flex-col gap-5.5">
 				<h1 className="w-fit leading-tight font-semibold">Open Source</h1>
 				<div className="flex flex-col gap-1 lg:gap-2">
@@ -188,9 +155,8 @@ export default function Page() {
 				</Drawer>
 			</div>
 			<div className="flex flex-col text-sm opacity-50">
-				P.S. I don&apos;t write blogs.{" "}
 				<p className="flex items-center gap-2">
-					© 2025 <ArrowRightIcon className="mb-0.5" /> Aaryan (blurpyx).
+					© 2025 <HugeiconsIcon className="mb-0.5" icon={ArrowRight02Icon} size={14} strokeWidth={2} /> Aaryan (blurpyx).
 				</p>
 			</div>
 		</div>

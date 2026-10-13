@@ -1,4 +1,5 @@
-import { ArrowBendDownRightIcon } from "@phosphor-icons/react";
+import { ArrowMoveDownRightIcon } from "@hugeicons-pro/core-stroke-rounded";
+import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
 import { Athletico } from "@/components/projects/athletico";
 import { Flotek } from "@/components/projects/flotek";
@@ -6,7 +7,7 @@ import { Flotek } from "@/components/projects/flotek";
 export const oss = [
 	{
 		id: 1,
-		name: "Sileo",
+		name: "sileo",
 		logo: "/sileo.png",
 		description: "Toast Library",
 		type: "Music Player",
@@ -16,7 +17,7 @@ export const oss = [
 	},
 	{
 		id: 2,
-		name: "Wora",
+		name: "wora",
 		logo: "/wora.png",
 		description: "Lossless Player",
 		sponsor: (
@@ -93,7 +94,11 @@ export function Project({
 			</div>
 			{project.sponsor && (
 				<div className="flex items-center gap-5 py-2 pb-3 pl-3.5">
-					<ArrowBendDownRightIcon className="opacity-50" size={16} />
+					<HugeiconsIcon
+						className="opacity-50"
+						icon={ArrowMoveDownRightIcon}
+						size={16}
+					/>
 					{project.sponsor}
 				</div>
 			)}
